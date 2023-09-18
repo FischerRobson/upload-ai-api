@@ -4,6 +4,7 @@ import { getPromptsRoute } from './routes/get-prompts'
 import { uploadVideoRoute } from './routes/upload-video'
 import { createTranscriptionRoute } from './routes/create-transcription'
 import { createAICompletionRoute } from './routes/create-ai-completion'
+import { createPromptRoute } from './routes/create-prompt'
 
 const app = fastify()
 
@@ -15,6 +16,7 @@ app.register(getPromptsRoute)
 app.register(uploadVideoRoute)
 app.register(createTranscriptionRoute)
 app.register(createAICompletionRoute)
+app.register(createPromptRoute)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('Server running on port 3333')
